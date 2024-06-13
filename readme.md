@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=PC방%20이용%20및%20관리%20프로젝트%20Spting%20Boot&fontSize=36&textBg=false&fontColor=fff)
+![header](https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=PC%20이용%20및%20관리%20프로젝트%20Spting%20Boot&fontSize=36&textBg=false&fontColor=fff)
 <div align=center>
   <h3>✌프로젝트 소개😊</h3>
   스프링 부트 JPA를 이용하여<br>
