@@ -65,36 +65,36 @@
 
   * **컨트롤러(Controller)**
     
-    ![controller](https://github.com/appcoding-ux/pcProject/assets/112378228/f06a348a-1ebd-41f9-bf81-2dab2f83d38c)
+    ![controller](https://github.com/appcoding-ux/pcProject/assets/112378228/f6e69678-9f46-4be5-9016-d6725f8858b0)
 
   * **테이블(Entity)**
     
-     ![domain](https://github.com/appcoding-ux/pcProject/assets/112378228/01d7a8ac-5190-4a37-90ae-d0d9c40da434)
+     ![domain](https://github.com/appcoding-ux/pcProject/assets/112378228/c8df79ac-9ad0-4905-972e-11078d348714)
 
   * **데이터 전송 객체(DTO)**
     
-     ![dto](https://github.com/appcoding-ux/pcProject/assets/112378228/6a9d550d-098e-464b-a1c6-c3a6c5ebba2a)
+     ![dto](https://github.com/appcoding-ux/pcProject/assets/112378228/bbec7d76-8ede-4d16-8ae6-61012839d3b5)
 
   * **디지털 스토리지(Repository)**
     
-    ![repository](https://github.com/appcoding-ux/pcProject/assets/112378228/645fe588-f33e-40f9-8afd-9e205e164ca9)
+    ![repository](https://github.com/appcoding-ux/pcProject/assets/112378228/f68e2a13-da82-434b-84b8-965278d1bb82)
 
   * **서비스(Service)**
 
-    ![service](https://github.com/appcoding-ux/pcProject/assets/112378228/2fb338ac-50bc-402e-ab46-209932f13ec7)
+    ![service](https://github.com/appcoding-ux/pcProject/assets/112378228/f792b6fd-9a84-4b6b-87f8-ff864361477a)
 
   * **웹소켓(WebSocket)**
     
-    ![websocket](https://github.com/appcoding-ux/pcProject/assets/112378228/bd92b2a0-f3d3-4fba-876f-afcb539b4b41)
+    ![websocket](https://github.com/appcoding-ux/pcProject/assets/112378228/4e333818-1021-4887-b82f-9950e519b1af)
 
   * **설정 클래스(Configuration)**
 
-    ![config](https://github.com/appcoding-ux/pcProject/assets/112378228/74aeda22-4a1d-4741-b0c5-5d1ea9e9e89a)
+    ![websocket](https://github.com/appcoding-ux/pcProject/assets/112378228/1696e2c8-0c88-4d7b-ac01-bedbfb753524)
 
 
   * **🔒스프링 시큐티리 부분**
 
-    ![security](https://github.com/appcoding-ux/pcProject/assets/112378228/989ef40d-e06a-4d3a-b9c4-f43e22512053)
+    ![security](https://github.com/appcoding-ux/pcProject/assets/112378228/b7a98195-5aab-48f3-a1b3-82d8fcb92afa)
 
 # 💻핵심기능
 
