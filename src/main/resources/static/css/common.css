@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; box-sizing: content-box;}
+
+ul,li,ol {margin:0; padding:0; list-style: none;}
+
+a {text-decoration: none; color:#333;}
+
+/* 컴퓨터 바탕화면 요금제 구매 모달 */
+.paymentWrap {position:absolute; z-index:1000; top:50%; left:50%; transform: translate(-50%, -50%); width:1240px; height:400px; background-color:#7ed1e2; display: none;}
+
+.payment {display: flex; height:100%;}
+
+.payLeftContent {width:70%;}
+
+.pay_left_title {display: flex; height:80px;}
+
+.buy_title > h2 {font-size:26px; font-weight:bold; color:#000; padding:25px;}
+
+.comment {padding-top:30px;}
+
+.pay_left_step {display: inline-block; width:80px; height:20px; border-radius: 15px; background: #000; color:#fff; text-align: center;}
+
+.pay_left_text {font-size:16px;}
+
+.buy {background-color: #dcdcdc; height:300px; margin-left:20px; border-radius: 10px; width:93%;}
+
+.buy > ul {display: flex; flex-wrap: wrap; align-content: center;}
+
+.buy > ul li {background-color:#fff; width:30%; margin:10px; height:70px; border-radius: 5px;}
+
+.buyBox > p {margin:10px 10px 5px 10px; width:80px; border:1px solid #ccc; border-radius: 10px; text-align: center; font-size:12px; color: #8f8f8f;}
+
+.pay_time {font-size:20px; color:#000; font-weight:bold; margin-left:10px;}
+
+.pay_price {float:right; font-size:16px; color:#000; font-weight:bold; margin:5px 15px 0 0;}
+
+.payRightContent {width:30%; background: #fff;}
+
+.payRightTop {margin-top:50px; text-align: center}
+
+.chargingBox {background: #ddd; width:90%; margin:25px auto 40px; height:180px; display: flex; justify-content: center; align-items: center; border-radius: 5px;}
+
+.chargingBox > span {color: #666; font-weight:600;}
+
+.payRightBot {width:90%; margin:0 auto; display: flex; justify-content: space-between}
+
+.closeBtn {width:27%; height:55px; background: #000; color:#fff; font-size:16px; font-weight:bold; text-align: center; border:0; border-radius: 5px;}
+
+.buyPayment {width:67%; height:55px; background: #c2c2c2; color:#fff; font-size:16px; text-align: center; border:0; border-radius: 5px; font-weight:bold; pointer-events: none;}
+
+/* 음식 주문 모달 */
+.blur-it {
+    filter: blur(4px);
+}
+
+a.btn {
+    width: 200px;
+    padding: 18px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0;
+    background: #e2525c;
+}
+
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: rgba(87, 87, 87, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    width: 90%;
+    height: 91%;
+    display: block;
+    position: relative;
+    z-index:10;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.modal-wrapper.open .modal {
+    opacity: 1;
+}
+
+.head {
+    height: 5%;
+    padding: 12px 30px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.btn-close {
+    font-size: 34px;
+    display: block;
+    float: right;
+    color: #fff;
+    margin-top:10px;
+}
+
+.content {
+    height:95%;
+    background-color:#000;
+}
+
+.navBox {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); display: flex;}
+
+.nav {
+    display: inline-flex;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 40px;
+    margin:0 auto;
+}
+
+.nav-item {
+    color: #83818c;
+    padding: 20px;
+    text-decoration: none;
+    transition: .3s;
+    margin: 0 6px;
+    z-index: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+.nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dfe2ea;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+.nav-item:not(.is-active):hover {
+    color: #333;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: .4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+    .nav {
+        overflow: auto;
+    }
+}
+
+/* 음식 주문*/
+.foodModalSearch {margin-left:20px; position:relative; margin-top:10px; width:200px;}
+
+.foodModalSearchInput > input {padding:10px 20px; border-radius: 20px; width:100%; border:0; outline: none;}
+
+.foodSearchGlass {position:absolute; top:50%; right:0; transform: translate(170%, -60%); font-size:18px; color:#ccc;}
+
+.content {display: flex;}
+
+.foodModalLeftContent {width:75%; height:100%; overflow-y: auto;}
+
+.foodModalLeftContent::-webkit-scrollbar {background-color: #ddd; width:12px;}
+
+.foodModalLeftContent::-webkit-scrollbar-thumb { background-color:#666;}
+
+.foodModalLeftContent > ul {height:100%;}
+
+.leftContentBox {width:16.5%; height:260px; display: inline-block; margin:10px 20px 0; background-color:#fff; border-radius: 5px; overflow: hidden;}
+
+.leftContentImg {width:100%; height:170px;}
+
+.leftContentImg > img {width:100%; height:100%;}
+
+.leftContentText > p:first-child {padding: 10px 10px 30px; font-size:18px; color:#333; font-weight:bold;}
+
+.leftContentText > p:last-child {padding-left: 10px; font-size:18px; color:#333;}
+
+/* 음식 주문 정보 확인 및 결제 */
+.foodModalRightContent {width:25%; height:100%;
+    background:
+            linear-gradient(#b848ff, transparent),
+            linear-gradient(to top left, rgba(102, 255, 102, 0.69), transparent),
+            linear-gradient(to top right, blue, transparent);
+}
+
+.rightContentTop {width:90%; margin:20px auto 0; background-color: #ccc; height:65%; border-radius: 10px;}
+
+.rightContentTopFoodBox {width:100%; height:90%; overflow-y: scroll;}
+
+.rightContentTopFoodBox::-webkit-scrollbar {background-color: #ccc; width:8px; border-radius: 55px;}
+
+.rightContentTopFoodBox::-webkit-scrollbar-thumb { background-color:#fff; border-radius: 55px;}
+
+.rightContentTopTotalPrice {width:100%; height:10%; background-color: #8c8c8c; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; display: flex; justify-content: space-between;}
+
+.rightContentTopTotalPrice > span:first-child {font-size:22px; color:#333; margin-top:20px; margin-left: 10px; font-weight:600;}
+
+.totalPrice {font-size:26px; color:#000; margin-top:20px; margin-right:10px;}
+
+.totalPrice > b {font-size:18px; color:#555;}
+
+/* 선택한 음식 주문 및 결제 */
+
+.memberSelectFood {position:relative; border-bottom:1px solid #888888;}
+
+.memberSelectFood > p {font-size:24px; color:#333; padding:10px 0 0 10px;}
+
+/* 선택한 음식 삭제 버튼*/
+.selectFoodDelete {position:absolute; top:5px; right:10px; color:#aaa; font-size:26px; border:0; outline: 0;}
+
+/* 선택한 음식 수량 증가 + 감소*/
+.selectFoodAmount {width:140px; margin-left:20px; display: flex; padding:15px 0;}
+
+.selectFoodAmount > input {background-color:#ccc; width:1px; height:1px; position:absolute; z-index:0;}
+
+.selectFoodAmount > label {display: inline-block; font-size:32px; padding:6px 15px 0;}
+
+.selectFoodAmount button {width:40px; height:35px; border-radius: 50%; font-size:36px; background-color: #b6b6b6; padding-bottom:5px; border:0; outline: 0;}
+
+/* 선택한 음식 가격 */
+.selectFoodPrice {position:absolute; bottom:15px; right:10px; font-size:24px; color:#333;}
+
+/* 선택한 음식 주문 및 요청사항 */
+.rightContentBot {margin:30px auto 0; width:90%;}
+
+.rightContentBot > input {width:90%; height:60px; padding:10px 15px; margin-bottom:15px; border:0; outline: 0; border-radius: 5px; margin-left:5px;}
+
+.rightContentBot > button {width:100%; height:55px; background: #c2c2c2; color:#fff; font-size:16px; text-align: center; border:0; border-radius: 5px; font-weight:bold; pointer-events: none;}
+
+
+
+
+/* 채팅 관련 css */
+.chatBtn {position:absolute; right:-100px; top:0; color:#fff; font-size:16px; cursor: pointer;}
+
+.chatBox {
+    display: none;
+    position:absolute;
+    right: -100px;
+    top: 0;
+    width: 300px;
+    height: 360px;
+    max-height: 500px;
+    z-index: 2;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    /*display: none;*/
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.messages {
+    color: rgba(255, 255, 255, .5);
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    height:90%;
+
+}
+
+.messages::-webkit-scrollbar {width:8px; background-color: transparent;}
+
+.messages::-webkit-scrollbar-thumb {border-radius: 99px; background-color: #333; border:4px solid #333; }
+
+.message-box {
+    flex: 0 1 40px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: relative;
+    height:10%;
+}
+
+.message-input {
+    background: none;
+    border: none;
+    outline: none!important;
+    resize: none;
+    color: rgba(255, 255, 255, .7);
+    font-size: 11px;
+    height: 17px;
+    margin: 0;
+    padding-right: 20px;
+    width: 265px;
+}
+
+.message-submit {
+    position: absolute;
+    top: 7px;
+    right: 25px;
+    color: #fff;
+    border: none;
+    background: #248A52;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 6px 10px;
+    border-radius: 10px;
+    outline: none!important;
+    transition: background .2s ease;
+    pointer-events: none;
+
+    &:hover {
+        background: #1D7745;
+    }
+}
+
+.chatStart {text-align: center; width:100%; padding:20px 10px; box-sizing: border-box;}
+
+.chatStartText {color: #6e6e6e; font-size:14px; line-height:20px;}
+
+.message {
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(109, 156, 255, 0.8);
+    margin: 8px 0;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-left: 25px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    color:#fff;
+    font-weight:600;
+}
+
+.admin::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    border-top: 4px solid rgba(109, 156, 255, 0.8);
+    border-right: 5px solid transparent;
+    left: 0;
+}
+
+.chatClose {position:absolute; right:10px; top:10px; color: #838383; background: rgba(0, 0, 0, 0.3); border:none; outline: none; z-index:10;}
+
+.userMessage {
+    float: right;
+    color: #fff;
+    text-align: right;
+    background: linear-gradient(120deg, #248A52, #257287);
+    border-radius: 10px 10px 0 10px;
+    margin-right:15px;
+}
+
+.userMessage::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    border-top: 4px solid #257287;
+    border-left: 5px solid transparent;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

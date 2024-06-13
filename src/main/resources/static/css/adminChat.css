@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.chatBox {
+    width: 80%;
+    height: 780px;
+    max-height: 1000px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    /*display: none;*/
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.messages {
+    color: rgba(255, 255, 255, .5);
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    height:90%;
+    padding-top:20px;
+}
+
+.messages::-webkit-scrollbar {width:8px; background-color: transparent;}
+
+.messages::-webkit-scrollbar-thumb {border-radius: 99px; background-color: #333; border:4px solid #333;}
+
+.message-box {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: relative;
+    height:10%;
+}
+
+.message-input {
+    background: none;
+    border: none;
+    outline: none!important;
+    resize: none;
+    color: rgba(255, 255, 255, .7);
+    font-size: 11px;
+    height: 100%;
+    margin: 0;
+    padding-right: 20px;
+    padding-top: 20px;
+    width: 85%;
+}
+
+.adminMessage-submit {
+    position: absolute;
+    top: 26px;
+    right: 25px;
+    color: #fff;
+    border: none;
+    background: #248A52;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 10px;
+    outline: none!important;
+    transition: background .2s ease;
+
+    &:hover {
+        background: #1D7745;
+    }
+}
+
+.chatStart {text-align: center; width:100%; padding:20px 10px; box-sizing: border-box;}
+
+.chatStartText {color: #6e6e6e; font-size:14px; line-height:20px;}
+
+.message {
+    clear: both;
+    float: right;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 0 10px;
+    background: rgba(109, 156, 255, 0.8);
+    margin: 8px 0;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-right: 25px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    color:#fff;
+    font-weight:600;
+}
+
+.admin::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    border-top: 4px solid rgba(109, 156, 255, 0.8);
+    border-left: 5px solid transparent;
+    right: 0;
+}
+
+.userMessage {
+    float: left;
+    color: #fff;
+    text-align: right;
+    background: linear-gradient(120deg, #248A52, #257287);
+    border-radius: 10px 10px 10px 0;
+    margin-left:25px;
+}
+
+.userMessage::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    border-top: 4px solid #257287;
+    border-right: 5px solid transparent;
+    left: 0;
+}
+

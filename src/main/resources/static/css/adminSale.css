@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.firstSaleTop {display: flex;}
+
+/* 최근 일주일 매출 */
+.first-box-left-graph {width:59%; height:85%; margin-right:1%;}
+
+.first-box-left-graph > canvas {width:100% !important; height:100% !important;}
+
+/**/
+.first-box-right-graph {width:39%; height:85%;}
+.first-box-right-graph > canvas {width:100% !important; height:100% !important;}
+
+/* 가장 많이 판매된 음식*/
+.manySalesFoodImg > h2 {font-size:28px; font-weight:bold; margin-bottom: 10px;}
+
+.manySalesFoodBox {display: inline-block; position:relative; border-radius: 10px; overflow: hidden}
+
+.manySalesFoodBox > img {width:250px; height:250px;}
+
+/* 음식 사진에 마우스를 올렸을 때 음식 정보*/
+.manySalesFoodHoverBox {position:absolute; left:0; bottom:0; height:130px; padding:20px 12px 0 16px; background: rgba(0, 0, 0, 0.3); width:100%; display: none;}
+
+.hoverFoodName {font-size:24px; color:#fff; font-weight:bold; display: block; padding:0 0 10px 0;}
+
+.hoverFoodSaleCount {color: #8af9ff; padding:0 0 7px 0; font-size:20px; display: block;}
+
+.hoverFoodPrice {font-size:22px; display: block; color:#fff;}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; }
+
+ul,li,ol {margin:0; padding:0; list-style: none;}
+
+a {text-decoration: none; color:#333;}
+
+/* 로그인 페이지 */
+.kakaoLoginForm {position:relative;}
+
+.kakaoLogin {float: right; color:#c4c3ca; position: absolute; right:10px; margin-top:5px;}
+
+.checkBtn {position:absolute; right:0; top:0;}
+
+input[name="remember-me"] {left:20px !important; }
+
+.useSeat {pointer-events: none; background-color:rgba(87, 200, 144, 0.8) !important; position:relative;}
+
+.useSeatBox {position:absolute; bottom:0; left:50%; z-index:100; transform: translate(-50%, 0%);}
+
+.userSeatUser {font-size:18px; color:#fff;}
+
+/* 피시방 자리에 로그인 했을 때 */
+.pcLoginHeader {position:relative; top:-120px; z-index: 9;}
+
+.centerContent > ul {margin:10px auto 0; width:500px; text-align: center; }
+
+.centerContent li {display: inline-block; width:30%; position:relative; z-index:11;}
+
+.centerContent li button {width:100%; border:0; background-color:dodgerblue; height:40px; border-radius: 5px; font-size:16px; color:#fff; font-weight:500;}
+
+.remainingTime {position:absolute; right:20%; top:10%; color:#fff; font-size:18px;}
+
+.headerRight {float:right;}
+
+/* 관리작 페이지 이동 링크 */
+.adminRink {position: absolute; right:10%; top:0; color:#fff; }
