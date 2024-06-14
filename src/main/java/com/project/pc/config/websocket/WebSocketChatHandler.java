@@ -56,9 +56,10 @@ public class WebSocketChatHandler extends TextWebSocketHandler {
             // 나에게 카카오톡 보내기 (관리자가 카카오로 로그인 했을 경우)
             // 나중에 여기서 혹시나 카톡을 못볼 경우를 대비해 이메일도 보낼 수 있다.
             // 근데 이게 카카오 로그인한 사람에게 메세지가 보내지는 거라서...
-            if(!chatMessage.getSender().equals("admin")){
-                messageService.sendMessage();
-            }
+            /*일단은 관리자가 카카오 로그인을 해야하기 때문에 비활성화*/
+//            if(!chatMessage.getSender().equals("admin")){
+//                messageService.sendMessage();
+//            }
 
             sendToEachSocket(sessions, new TextMessage(objectMapper.writeValueAsString(chatMessage)));
         }else if(chatMessage.getType().equals(ChatMessage.MessageType.ADMIN_ENTER)){

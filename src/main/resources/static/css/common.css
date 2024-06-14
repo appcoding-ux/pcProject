@@ -248,12 +248,12 @@ a.btn {
 .memberSelectFood > p {font-size:24px; color:#333; padding:10px 0 0 10px;}
 
 /* 선택한 음식 삭제 버튼*/
-.selectFoodDelete {position:absolute; top:5px; right:10px; color:#aaa; font-size:26px; border:0; outline: 0;}
+.selectFoodDelete {position:absolute; top:5px; right:10px; color:#aaa; font-size:26px; border:0; outline: 0; background:#ccc;}
 
 /* 선택한 음식 수량 증가 + 감소*/
 .selectFoodAmount {width:140px; margin-left:20px; display: flex; padding:15px 0;}
 
-.selectFoodAmount > input {background-color:#ccc; width:1px; height:1px; position:absolute; z-index:0;}
+.selectFoodAmount > input {background-color:#ccc; width:1px; height:1px; position:absolute; z-index:-1;}
 
 .selectFoodAmount > label {display: inline-block; font-size:32px; padding:6px 15px 0;}
 
@@ -320,12 +320,13 @@ a.btn {
     border: none;
     outline: none!important;
     resize: none;
+    overflow: hidden;
     color: rgba(255, 255, 255, .7);
     font-size: 11px;
-    height: 17px;
+    min-height: 17px;
     margin: 0;
-    padding-right: 20px;
-    width: 265px;
+    padding-right: 40px;
+    width: 75%;
 }
 
 .message-submit {

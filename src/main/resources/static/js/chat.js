@@ -3,6 +3,7 @@ $(function(){
     let id = $('input[name="id"]').val();
     let socket;
     let roomId;
+    let outMsg={"type" : "OUT","roomId":roomId ,"sender":id,"msg":""};
 
     $('.chatBtn').click(function(e){
         e.preventDefault();
@@ -106,16 +107,7 @@ $(function(){
         e.stopPropagation();
 
         if(confirm("채팅을 종료하시겠습니까?")){
-            let outMsg={"type" : "OUT","roomId":roomId ,"sender":id,"msg":""};
-            socket.send(JSON.stringify(outMsg));
-            socket.close();
-
-            console.log('연결 종료');
-            $('.messages').children().remove();
-
-            $(this).parent('.chatBox').stop().hide();
-
-            $('.chatBtn').stop().show();
+            chatClose(socket);
         }else {
             return false;
         }
@@ -173,6 +165,10 @@ $(function(){
         $('textarea[name="chatMessage"]').val('');
 
         scrollToBottom();
+
+        setTimeout(() => {
+            chatClose(socket);
+        }, 120000);
     }
 
     // 관리자가 메세지를 전송했을 때와 내가 메세지를 전송했을 떄
@@ -215,6 +211,19 @@ $(function(){
     function scrollToBottom() {
         let chatBox = $('.messages');
         chatBox.scrollTop(chatBox[0].scrollHeight);
+    }
+
+    function chatClose(socket){
+        let outMsg={"type" : "OUT","roomId":roomId ,"sender":id,"msg":""};
+        socket.send(JSON.stringify(outMsg));
+        socket.close();
+
+        console.log('연결 종료');
+        $('.messages').children().remove();
+
+        $('.chatBox').stop().hide();
+
+        $('.chatBtn').stop().show();
     }
 
     //메세지 보내기 버튼 눌렀을 떄..
