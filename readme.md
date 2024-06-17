@@ -136,7 +136,7 @@
 * **비밀번호 변경**
   * `로그인 화면`에서 `비밀번호 찾기`를 통해 `이메일 인증`을 하고 `비밀번호 변경`을 할 수 있습니다
     
-    ![join](https://github.com/appcoding-ux/pcProject/assets/112378228/edd5b80e-84a2-463d-a650-7fbbd4a52434)
+    ![findPass](https://github.com/appcoding-ux/pcProject/assets/112378228/50bb0839-fb88-493f-82bf-5f96551c6949)
 
 * **PC 이용 자리 선택 & 시간 충전**
   * `정삭적으로 로그인`이 되었을 때 `비어있는 자리`를 `이용`할 수 있습니다.
@@ -154,7 +154,7 @@
     ![foodCategory](https://github.com/appcoding-ux/pcProject/assets/112378228/517ba946-c54d-44e4-9e21-3d9992170005)
  
   * `검색`을 통해 음식을 검색할 수 있습니다.
-    ![foodCategory](https://github.com/appcoding-ux/pcProject/assets/112378228/3fa05e06-1624-4f51-ab41-08638b0878bc)
+    ![foodSearch](https://github.com/appcoding-ux/pcProject/assets/112378228/6850bf60-fa07-4d44-be01-3e07f69f2d25)
     
 * **음식주문**
   * `제품 선택` 후 `수량` 및 `선택 상품 삭제`, `요청메세지` 작성을 마친 후<br>
@@ -187,7 +187,7 @@
       ![adminFoodRead Update](https://github.com/appcoding-ux/pcProject/assets/112378228/f81dd4d8-32dc-4e6a-bd69-7f6a6a4758d4)
    
     * **음식 삭제**
-      ![adminFoodRead Update](https://github.com/appcoding-ux/pcProject/assets/112378228/e7d9a52c-865c-4f04-8b8c-45e706d484b6)
+      ![adminFoodRemove](https://github.com/appcoding-ux/pcProject/assets/112378228/c9b1a929-e33d-4b83-991f-bb9a94a59dc7)
    
     * **음식 검색 & 페이징**
       ![adminFoodSearch-min](https://github.com/appcoding-ux/pcProject/assets/112378228/7fb1cef4-15de-4f9d-842d-2a6d45aa1863)
