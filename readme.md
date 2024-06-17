@@ -52,10 +52,9 @@
   아직 못만들었다..
 
 
-
   🧸ER 다이어그램
   
-  ![image](https://github.com/appcoding-ux/pcProject/assets/112378228/513d0e66-2f63-47a8-b0fd-d04af8c411aa)
+  ![erd](https://github.com/appcoding-ux/pcProject/assets/112378228/ca1977b1-0fa9-463c-8ce8-52e7916ad5df)
 </details>
 
 
